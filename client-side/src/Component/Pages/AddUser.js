@@ -9,12 +9,13 @@ const AddUser = () => {
         const name = event.target.name.value;
         const username = event.target.username.value;
         const password = event.target.password.value;
+        const email = event.target.email.value;
         const state = event.target.state.value;
         const city = event.target.city.value;
         const country = event.target.country.value;
-        console.log(id, name, username, password, state, city, country)
+        console.log(id, name, username, password, email, state, city, country)
 
-        const user = {id, name, username, password, state, city, country};
+        const user = {id, name, username, password, email, state, city, country};
         axios.post("http://localhost:5000/api/users", user).then(res => alert("User added successfully"))
     }
   return (
@@ -29,6 +30,7 @@ const AddUser = () => {
                     <input className='bg-gray-200 h-10 outline-none px-2 mb-2' type="text" name="name" id="" placeholder='Enter Name'/>
                     <input className='bg-gray-200 h-10 outline-none px-2 mb-2' type="text" name="username" id="" placeholder='Enter username'/>
                     <input className='bg-gray-200 h-10 outline-none px-2 mb-2' type="password" name="password" id="" placeholder='Enter password'/>
+                    <input className='bg-gray-200 h-10 outline-none px-2 mb-2' type="email" name="email" id="" placeholder='Enter email'/>
                     <input className='bg-gray-200 h-10 outline-none px-2 mb-2' type="text" name="state" id="" placeholder='Enter state'/>
                     <input className='bg-gray-200 h-10 outline-none px-2 mb-2' type="text" name="city" id="" placeholder='Enter city'/>
                     <input className='bg-gray-200 h-10 outline-none px-2 mb-2' type="text" name="country" id="" placeholder='Enter country'/>

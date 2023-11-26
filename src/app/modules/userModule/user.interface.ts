@@ -7,6 +7,7 @@ export type TUser = {
     id: number;
     username: string;
     password: string;
+    email: string;
     name: string;
     address: TAddress;
     isActive?: boolean;

@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema<TUser>({
   id: {type: Number, required: true},
   username: {type: String, required: true},
   password: {type: String, required: true},
+  email: {type: String, required: true},
   name: {type: String, required: true},
   address: addressSchema,
   isActive: {type: Boolean, default: true}

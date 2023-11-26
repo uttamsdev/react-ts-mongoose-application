@@ -25,6 +25,9 @@ const getSingleUserFromDB = async(id: number) => {
     return result;
 }
 
+const orderToDB = async() => {
+    const result = await Users.create()
+}
 export const UserServices = {
     createUserToDB,
     getAllUserFromDB,
